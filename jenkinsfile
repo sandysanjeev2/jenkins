@@ -6,7 +6,7 @@ pipeline {
             steps {
 		sh '''
 			#!/bin/bash
-			cd /var/lib/jenkinsfile/workspace
+			cd var/lib/jenkinsfile/workspace
 			git clone https://github.com/sandysanjeev2/test1.git
 			cd test1
 			make
