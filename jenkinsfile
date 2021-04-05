@@ -2,9 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+		sh '''
+			cd c-project
+			git clone https://github.com/sandysanjeev2/test1.git
+			cd test1
+			make
+		'''
             }
         }
     }
