@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
 		sh '''
+			#!/bin/bash
 			cd /home/ec2-user/c-project
 			git clone https://github.com/sandysanjeev2/test1.git
 			cd test1
