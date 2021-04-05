@@ -6,6 +6,7 @@ pipeline {
             steps {
 		sh '''
 			#!/bin/bash
+			mkdir -p /home/ec2-user/c-project
 			cd /c-project
 			git clone https://github.com/sandysanjeev2/test1.git
 			cd test1
