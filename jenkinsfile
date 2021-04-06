@@ -7,8 +7,13 @@ pipeline {
 		sh '''
 			#!/bin/bash
 			cd /var/lib/jenkins/workspace
+			if [ -f test1 ];then
+				cd test1
+				git pull  https://github.com/sandysanjeev2/test1.git
+			else
 			git clone https://github.com/sandysanjeev2/test1.git
 			cd test1
+			fi
 			make
 		'''
             }
